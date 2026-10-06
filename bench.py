@@ -119,7 +119,7 @@ def run_isolated(model_path: str, quantization: str | None, num_seqs: int, enfor
 
 def main():
     parser = argparse.ArgumentParser(description="Benchmark Nano-vLLM (FP16 vs INT8)")
-    parser.add_argument("--model", type=str, default="C:/Users/Mizan/huggingface/Qwen3-0.6B")
+    parser.add_argument("--model", type=str, default="~/huggingface/Qwen3-0.6B")
     parser.add_argument("--quantization", type=str, default=None, choices=[None, "int8"],
                         help="Run only one mode: None (FP16) or 'int8'")
     parser.add_argument("--compare", action="store_true", default=True,

@@ -5,10 +5,9 @@ import torch
 
 
 def main():
-    path = os.path.expanduser("C:/Users/Mizan/huggingface/Qwen3-0.6B")
+    path = os.path.expanduser("~/huggingface/Qwen3-0.6B")
     tokenizer = AutoTokenizer.from_pretrained(path)
     llm = LLM(path, enforce_eager=True, tensor_parallel_size=1)
-    print("INT16 KV blocks:", llm.model_runner.config.num_kvcache_blocks)
     
 
 
